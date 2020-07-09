@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: my-prometheus
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'prometheus'
+  metrics:
+    tags:
+      application: ${spring.application.name}
